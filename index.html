@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.svg" type="image/x-icon">
+    <title>Jonah Vagmo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.fcom/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<!-- Loading div og data for bootstrap scrollspy komponent greia på body -->
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- sidenav med github link og bootstrap scrollspy navigasjon lenker -->
+    <nav id="navbar" class="navbar shadow">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#home" class="nav-link" data-bs-target="#home"><i class="bi bi-house-fill"></i></a>
+            </li>
+            <li class="nav-item">
+                <a href="#about" class="nav-link" data-bs-target="#about"><i class="bi bi-person-square"></i></a>
+            </li>
+            <li class="nav-item">
+                <a href="#skills" class="nav-link" data-bs-target="#skills"><i class="bi bi-file-earmark-code-fill"></i></a>
+            </li>
+            <hr>    
+            <li class="nav-item">
+                <a href="https://github.com/pq3t" target="_blank" class="nav-link"><i class="bi bi-github"></i></a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact" class="nav-link" data-bs-target="#contact"><i class="bi bi-envelope-open-fill"></i></a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- hoved tittel med quote fra Lao Tzu og en knapp med bootstrap icon og en animert pil -->
+    <section id="home" class="min-vh-100 d-flex flex-column justify-content-center align-items-center text-center">
+        <h1 class="main-title">The journey of a thousand <br> miles begins with a single step.</h1>
+        <a href="#about"><button class="continue-btn mb-4 shadow">Continue <i class="bi bi-mouse"></i></button></a>
+        <div class="scroll-indicator"><i class="bi bi-arrow-down"></i></div>
+    </section>
+
+    <!-- Card med AOS fade effekt som har info om meg. Her bruker jeg også en lignende bakgrunn pattern på bildet som det jeg har på intro delen. -->
+    <section data-aos="fade-up" id="about" class="about-section container mb-5">
+        <div class="row align-items-center g-4">
+            <div class="col-md-5 text-center">
+                <img src="bilde.png" alt="Profile" class="profile-image">
+            </div>
+            <div class="col-md-7">
+                <div class="about-content">
+                    <div class="location">
+                        <i class="bi bi-geo-alt" style="color: #e6a4a4;"></i>
+                        Drammen, Norway
+                    </div>
+                    <h2 class="about-heading">
+                        About Me
+                        <img src="wave.png" class="wave-emoji" width="30px">
+                    </h2>
+                    <p class="about-text">I'm a developer who likes to create unique and creative experiences with modern frameworks and languages.</p>
+                    <!-- noen placeholder frameworks. De bruker grid og et bootstrap ikon. -->
+                    <div class="framework-grid">
+                        <div class="framework-card">
+                            <i class="bi bi-braces"></i>
+                            <span>Svelte</span>
+                        </div>
+                        <div class="framework-card">
+                            <i class="bi bi-braces"></i>
+                            <span>Vue</span>
+                        </div>
+                        <div class="framework-card">
+                            <i class="bi bi-braces"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="framework-card">
+                            <i class="bi bi-braces"></i>
+                            <span>PHP</span>
+                        </div>
+                    </div>
+    
+                    <div class="status-badge">
+                        <i style="color: #166534;" class="bi bi-stars"></i>
+                        Currently working on: This Portfolio!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Noen bootstrap cards med customized aos animasjoner, en veldig enkel progress bar og en apple emoji. Jeg bruker section I html så det er enklere og lese koden. -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="text-center mb-5 skill-heading" data-aos="fade-up">What I'm Good At <img src="OK.png" width="30px"></h2>
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-card">
+                        <i class="bi bi-code-slash skill-icon"></i>
+                        <h4>Web</h4>
+                        <p>Modern web development with HTML5 & JavaScript</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-card">
+                        <i class="bi bi-cloud-fill skill-icon"></i>
+                        <h4>Cloud Services</h4>
+                        <p>Server and cloud management using Debian & Docker</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="skill-card">
+                        <i class="bi bi-brush-fill skill-icon"></i>
+                        <h4>UI/UX Design</h4>
+                        <p>Figma, CSS3 & Modern Web Design Frameworks</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 65%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- en kontakt section. Jeg bruker samme klassen som den i forrige koden. Jeg bruker også typeit.js for en kul animasjon. -->
+    <section id="contact" class="skills-section">
+        <div class="container">
+            <h1 class="contact-title">Let's create something <span id="loopedtitle" class="cursive-text"></span></h1>
+            <a href="mailto:jonahv@bfk.no"><button class="contact-btn mb-4 shadow">Contact Me <i class="bi bi-envelope-open"></i></button></a>
+
+        </div>
+    </section>
+    <!-- enkel footer -->
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Jonahv@bfk.no</a></li>
+        </ul>
+        <p class="text-center text-body-secondary">Jonah - 2025</p>
+      </footer>
+    <script src="https://unpkg.com/typeit/dist/index.umd.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        new TypeIt("#loopedtitle", {
+          strings: ["fun", "creative", "useful",],
+          loop: true,
+          breakLines: false,
+          speed: 50,
+          deleteSpeed: 50,
+          nextStringDelay: 1000
+        })
+        .pause(1000)
+        .delete()
+        .go();
+      </script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+
+        // Loading animation
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.querySelector('.loader-wrapper').classList.add('fade-out');
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

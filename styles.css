@@ -1,0 +1,333 @@
+/* Variabel for navigasjon bredde og kode + spinne animasjon for loading */
+
+:root {
+    --nav-width: 60px;
+}
+
+hr {
+    color: #a2abb5;
+}
+
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #e6a4a4;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+}
+
+.loader-wrapper.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* Skills css kode.  */
+
+.skills-section {
+    padding: 5rem 0;
+    background-color: white;
+}
+
+.skill-heading {
+    font-family: 'darker grotesque', serif;
+    font-size: 2.5rem;
+}
+
+.skill-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #e6a4a4;
+}
+
+/* kode for streken på skill kortene */
+
+.progress {
+    height: 8px;
+    margin-top: 0.5rem;
+}
+
+.progress-bar {
+    background-color: #e6a4a4;
+}
+
+/* body css, med bakgrunn mønster jeg lagde med en nettside */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fdf2f2;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #fdf2f2 10px ), repeating-linear-gradient( #e5e5f755, #e5e5f7 );
+    color: #1a1a1a;
+    padding-right: var(--nav-width);
+}
+
+/* CSS kode for navigasjonen på. Bruker  */
+
+.navbar {
+    background-color: #2a2a2a;
+    width: var(--nav-width);
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 0;
+    border-radius: 16px;
+    margin: 10px;
+    height: calc(100vh - 20px);
+}
+
+.navbar-nav {
+    width: 100%;
+    padding: 8px;
+}
+
+.nav-item {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.nav-link {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+    background-color: #e6a4a4;
+}
+
+.main-title {
+    font-family: "Alegreya", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.contact-title {
+    font-family: 'darker grotesque', serif;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+
+.cursive-text {
+    font-weight: 500;
+    font-family: "Alegreya", serif;
+}
+
+.about-section {
+    margin-top: 5rem;
+}
+
+.profile-container {
+    position: relative;
+}
+.profile-image {
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 280px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    background-color: #fdf2f2;
+    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #fdf2f2 7px), 
+                      repeating-linear-gradient(#e6a4a4, #ddd);
+}
+
+.about-content {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.about-heading {
+    font-family: 'darker grotesque', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.wave-emoji {
+    animation: wave 3s ease-in-out infinite;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.location svg {
+    color: #e6a4a4;
+}
+
+.about-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.framework-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.framework-card {
+    position: relative;
+    background: #fdf2f2;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.framework-card:hover {
+    background: #fce7e7;
+    transform: translateY(-2px);
+}
+
+.framework-icon {
+    fill: #e6a4a4;
+}
+
+.experience-tooltip {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #333;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f0fdf4;
+    color: #166534;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.9rem;
+}
+
+.status-icon {
+    fill: currentColor;
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+}
+
+@media (max-width: 768px) {
+    .framework-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.continue-btn {
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.continue-btn:hover {
+    transform: translateY(-2px);
+    background-color: #2a2a2a;
+}
+
+.contact-btn {
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    background-color: #2a2a2a;
+    color: #e6a4a4  ;
+}
+
+.scroll-indicator {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
